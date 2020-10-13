@@ -3,6 +3,7 @@ include 'database.php';
 
 function post($username, $db) {
     $c = $db->query("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'shokherarot' AND TABLE_NAME = 'posts' ")->fetch_assoc();
+
     $count = $c['AUTO_INCREMENT'];
     
     $ImageName = $_FILES['photo']['name'];
